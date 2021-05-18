@@ -36,19 +36,29 @@ I hope I'll learn much more in the future.
 Be sure you have docker installed on you PC.
 First, we need to enter directory of the app, after that, run cmd.exe inside app folder.
 To run this project on docker, enter following commands:
+
 >docker-compose up --build
+>
 (This is a command for building PHP docker image and running containers)
 
 Running a new laravel project requires running composer from app docker container.
 To list container names, enter command:
+
 >docker ps
+>
 After that, let's runn our "app" container
+
 >docker exec -it <docker container ID> bash
+    
 Now we are inside container, and run this command:
+    
 >ls -la
 After that, install composer in case you don't have it installed:
+    
 >composer install
+    
 Just few steps more to run the app:
+    
 >docker compose down
 >docker compose up
     
