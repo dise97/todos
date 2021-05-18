@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-#TodoList app
+# TodoList app
 
-##Intro
+## Intro
 
 First of all, this is my first time using laravel framework and docker (I have managed it, I hope).
 
@@ -31,7 +31,7 @@ resources
 That's all about this app. I have learned a lot of things and I'm happy with that. It was fun to deal with this simple project, it provided me a lot of knowledge altough it's very simple :)
 I hope I'll learn much more in the future.
 
-## Running the app##
+## Running the app
 
 Be sure you have docker installed on you PC.
 First, we need to enter directory of the app, after that, run cmd.exe inside app folder.
