@@ -7,56 +7,49 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+#TodoList app
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+##Intro
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+First of all, this is my first time using laravel framework and docker (I have managed it, I hope).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. The app retrieves JSON data from REST API "/todos" endpoint.
+2. Here is HTML table where each row corresponds to one TODO (additionaly, there are informations about user ID, todo ID and information about TODO completion)
+3. Speaking of error handling, when we start a new Laravel project, error and exception handling is already configured for you. The App\Exceptions\Handler class is where all exceptions thrown by your application are logged and then rendered to the user. (https://laravel.com/docs/8.x/errors).
+All we need to do is to make a custom view for any error or exception. In this project, that would be 404.blade.php which is inside path:
+resources
+  -views
+    -errors
+4.Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I?ll give the instructions for running this app on docker.
+5. Web application is running on PHP 7.4.19 version
+6. HTTP request is established by Guzzle
+7. Code is structured in line with the general MVC pattern, since Laravel framework provides us MVC pattern already.
+8. I used one of the PHP formatters available in Visual Studio Code for formatting PHP code (It follows PSR-2 and Symfony PHP coding standards, I guess).
+9. This project includes folder vendor (since I have excluded it in .gitignor file).
+10. It's optional, but there is css code inside this app (I have questions about css files in Laravel, since it is deleted every time I put css/app.css inside public folder).
 
-## Learning Laravel
+That's all about this app. I have learned a lot of things and I'm happy with that. It was fun to deal with this simple project, it provided me a lot of knowledge altough it's very simple :)
+I hope I'll learn much more in the future.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+##Running the app
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Be sure you have docker installed on you PC.
+First, we need to enter directory of the app, after that, run cmd.exe inside app folder.
+To run this project on docker, enter following commands:
+>docker-compose up --build
+(This is a command for building PHP docker image and running containers)
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Running a new laravel project requires running composer from app docker container.
+To list container names, enter command:
+>docker ps
+After that, let's runn our "app" container
+>docker exec -it <docker container ID> bash
+Now we are inside container, and run this command:
+>ls -la
+After that, install composer in case you don't have it installed:
+>composer install
+Just few steps more to run the app:
+>docker compose down
+>docker compose up
+    
+###That's it! TODOS app is running on http://localhost:8080/
