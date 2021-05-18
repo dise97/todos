@@ -15,12 +15,14 @@ First of all, this is my first time using laravel framework and docker (I have m
 
 1. The app retrieves JSON data from REST API "/todos" endpoint.
 2. Here is HTML table where each row corresponds to one TODO (additionaly, there are informations about user ID, todo ID and information about TODO completion)
-3. Speaking of error handling, when we start a new Laravel project, error and exception handling is already configured for you. The App\Exceptions\Handler class is where all exceptions thrown by your application are logged and then rendered to the user. (https://laravel.com/docs/8.x/errors).
+3. Speaking of error handling, when we start a new Laravel project, error and exception handling is already configured for you. The App\Exceptions\Handler class is where all exceptions thrown by your application are logged and then rendered to the user, (ref. to:https://laravel.com/docs/8.x/errors).
 All we need to do is to make a custom view for any error or exception. In this project, that would be 404.blade.php which is inside path:
+
 resources
   -views
     -errors
-4.Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I?ll give the instructions for running this app on docker.
+    
+4.Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I'll give the instructions for running this app on docker.
 5. Web application is running on PHP 7.4.19 version
 6. HTTP request is established by Guzzle
 7. Code is structured in line with the general MVC pattern, since Laravel framework provides us MVC pattern already.
@@ -46,7 +48,7 @@ To list container names, enter command:
 
 >docker ps
 >
-After that, let's runn our "app" container
+After that, let's run our "app" container
 
 >docker exec -it <docker container ID> bash
     
