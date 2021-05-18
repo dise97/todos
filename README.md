@@ -31,7 +31,7 @@ resources
 That's all about this app. I have learned a lot of things and I'm happy with that. It was fun to deal with this simple project, it provided me a lot of knowledge altough it's very simple :)
 I hope I'll learn much more in the future.
 
-##Running the app##
+## Running the app##
 
 Be sure you have docker installed on you PC.
 First, we need to enter directory of the app, after that, run cmd.exe inside app folder.
@@ -61,6 +61,7 @@ After that, install composer in case you don't have it installed:
 Just few steps more to run the app:
     
 >docker compose down
+    
 >docker compose up
     
-###That's it! TODOS app is running on http://localhost:8080/
+### That's it! TODOS app is running on http://localhost:8080/
