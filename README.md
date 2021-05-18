@@ -19,8 +19,8 @@ First of all, this is my first time using laravel framework and docker (I have m
 All we need to do is to make a custom view for any error or exception. In this project, that would be 404.blade.php which is inside path:
 
 resources
-  -views
-    -errors
+- views
+  - errors
     
 4.Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I'll give the instructions for running this app on docker.
 5. Web application is running on PHP 7.4.19 version
