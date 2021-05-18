@@ -13,22 +13,22 @@
 
 First of all, this is my first time using laravel framework and docker (I have managed it, I hope).
 
-1. The app retrieves JSON data from REST API "/todos" endpoint.
-2. Here is HTML table where each row corresponds to one TODO (additionaly, there are informations about user ID, todo ID and information about TODO completion)
-3. Speaking of error handling, when we start a new Laravel project, error and exception handling is already configured for you. The App\Exceptions\Handler class is where all exceptions thrown by your application are logged and then rendered to the user, (ref. to:https://laravel.com/docs/8.x/errors).
+- [x] The app retrieves JSON data from REST API "/todos" endpoint.
+- [x] Here is HTML table where each row corresponds to one TODO (additionaly, there are informations about user ID, todo ID and information about TODO completion)
+- [x] Speaking of error handling, when we start a new Laravel project, error and exception handling is already configured for you. The App\Exceptions\Handler class is where all exceptions thrown by your application are logged and then rendered to the user, (ref. to:https://laravel.com/docs/8.x/errors).
 All we need to do is to make a custom view for any error or exception. In this project, that would be 404.blade.php which is inside path:
 
 resources
 - views
   - errors
     
-4.Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I'll give the instructions for running this app on docker.
-5. Web application is running on PHP 7.4.19 version
-6. HTTP request is established by Guzzle
-7. Code is structured in line with the general MVC pattern, since Laravel framework provides us MVC pattern already.
-8. I used one of the PHP formatters available in Visual Studio Code for formatting PHP code (It follows PSR-2 and Symfony PHP coding standards, I guess).
-9. This project includes folder vendor (since I have excluded it in .gitignor file).
-10. It's optional, but there is css code inside this app (I have questions about css files in Laravel, since it is deleted every time I put css/app.css inside public folder).
+- [x] Since I am newbie speaking about docker and "dockerizing" apps, there are images (this is a proper way to call it) for webserver and app itself. I'll give the instructions for running this app on docker.
+- [x] Web application is running on PHP 7.4.19 version
+- [x] HTTP request is established by Guzzle
+- [x] Code is structured in line with the general MVC pattern, since Laravel framework provides us MVC pattern already.
+- [x] I used one of the PHP formatters available in Visual Studio Code for formatting PHP code (It follows PSR-2 and Symfony PHP coding standards, I guess).
+- [x] This project includes folder vendor (since I have excluded it in .gitignor file).
+- [x] It's optional, but there is css code inside this app (I have questions about css files in Laravel, since it is deleted every time I put css/app.css inside public folder).
 
 That's all about this app. I have learned a lot of things and I'm happy with that. It was fun to deal with this simple project, it provided me a lot of knowledge altough it's very simple :)
 I hope I'll learn much more in the future.
